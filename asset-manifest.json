@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GlobalShoes/static/css/main.c49ef4fc.css",
+    "main.js": "/GlobalShoes/static/js/main.ed98923b.js",
+    "index.html": "/GlobalShoes/index.html",
+    "main.c49ef4fc.css.map": "/GlobalShoes/static/css/main.c49ef4fc.css.map",
+    "main.ed98923b.js.map": "/GlobalShoes/static/js/main.ed98923b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c49ef4fc.css",
+    "static/js/main.ed98923b.js"
+  ]
+}
