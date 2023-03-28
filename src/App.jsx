@@ -1,15 +1,16 @@
-import { ItemListComponent } from "./components";
+import React from "react";
 import { MainLayout } from "./layouts";
+import { MainRoutes } from "./routes/MainRoutes";
+
+
+
 function App() {
 
 
 
   return (
     <MainLayout>
-      <div>
-        <div><ItemListComponent item= "Item"/></div>
-        <div><ItemListComponent anotherItem="Another item"/></div>
-    </div>
+      <MainRoutes/>
     </MainLayout>
   );
 }

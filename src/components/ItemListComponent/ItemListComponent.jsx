@@ -1,12 +1,9 @@
 import React from 'react'
+import { Products } from '../../pages/Products'
 
-export const ItemListComponent = (props) => {
+export const ItemListComponent = () => {
     return (
-        <div className='itemListContainer' style={{textAlign: "center",fontSize: "30px"}}>
-            <p className='item'>{props.item}</p>
-            <p className='anotherItem'>{props.anotherItem}</p>
+        <div><Products/> </div>
             
-
-        </div>
     )
 }

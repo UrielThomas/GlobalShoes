@@ -10,7 +10,6 @@ export const MainLayout = ({children}) => {
     }
     return (
         <div style={styles}>
-            <NavBarComponent/>
             {children}
             </div>
     )

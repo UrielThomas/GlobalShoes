@@ -1,0 +1,47 @@
+nav {
+    border: 1px solido black;
+
+
+    .brand {
+        text-decoration: none;
+        position: relative;
+        font-size: 30px;
+        font-weight: 900;
+        text-decoration: none;
+        color: gray;
+    }
+
+    .list {
+        text-align: center;
+        position: relative;
+        left: 50px;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: rgb(219, 42, 42);
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+
+
+    }
+    .cart {
+        position: fixed;
+        right: 0%;
+        top: 2%
+    }
+
+}
+
+
