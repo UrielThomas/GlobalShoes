@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Contacto, Home,DetailedProduct,Products,CategoryPage,Checkout } from "../pages";
-import {NavBarComponent,CategoriesComponent} from "../components";
-import { ItemListComponent } from "../components";
+import {  Home,DetailedProduct,Products,CategoryPage,Checkout } from "../pages";
+import {NavBarComponent} from "../components";
 import { NewProductFormComponent } from "../components/NewProductFormComponent/NewProductFormComponent";
 
 export const MainRoutes = () => {
