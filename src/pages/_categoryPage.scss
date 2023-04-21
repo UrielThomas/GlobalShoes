@@ -1,0 +1,32 @@
+.CBackground{
+    background-color: rgb(0, 0, 0);
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+    
+
+    .CContainer{
+        padding:5px;
+
+        .CcardImage{
+            height: 20rem;
+        }
+
+        .CcardB{
+            border: 2px solid black;
+
+            .CcardTitle{
+                text-decoration: none;
+                color: black;
+            }
+
+            .Ctext{
+                text-decoration: none;
+                color: black;
+            }
+
+        }
+    }
+
+}

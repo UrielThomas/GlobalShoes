@@ -1,5 +1,6 @@
 nav {
     border: 1px solido black;
+    position: relative;
 
 
     .brand {
@@ -37,6 +38,7 @@ nav {
 
     }
     .cart {
+        color: antiquewhite;
         position: fixed;
         right: 0%;
         top: 2%

@@ -7,7 +7,7 @@ export const Home = () => {
     return (
 
         <div>
-            {/* <div><ItemListComponent/></div> */}
+            <div><ItemListComponent/></div>
         </div>
 
     );

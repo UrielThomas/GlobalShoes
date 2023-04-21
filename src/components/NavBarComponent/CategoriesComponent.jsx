@@ -10,16 +10,16 @@ export const CategoriesComponent = () => {
                 <li>
                     <NavDropdown
                         id="nav-dropdown-dark-example"
-                        title="Catalogo"
+                        title="Category"
                         menuVariant="dark">
-                        <NavDropdown.Item><Link to="/Caballero">Caballero</Link></NavDropdown.Item>
-                        <NavDropdown.Item><Link to="/Dama">Dama</Link></NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item><Link to="/Ninos">Ninos</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link to="/CategoryPage/men's clothing">Men's clothing</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link to="/CategoryPage/jewelery">Jewelery</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link to="/CategoryPage/electronics">Electronics</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link to="/CategoryPage/women's clothing">Women's clothing</Link></NavDropdown.Item>
                     </NavDropdown>
                 </li>
-                <li><a href="#">Saldos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><Link to="/Products">Products</Link></li>
+                <li><Link to='/new-product'>New Product</Link></li>
 
             </ul>
         </div>

@@ -1,39 +1,75 @@
-import React from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { Products } from './Products'
+import React, { useState, useEffect } from 'react'
+import { Link, useParams, } from 'react-router-dom'
+import { getDocs, getFirestore, collection } from 'firebase/firestore'
+import Card from 'react-bootstrap/Card';
+
+
+
+
+
+
 
 
 
 export const CategoryPage = () => {
-    const {catId} = useParams();
-    const catProd = Products
 
 
 
-    let filter=[]
-    for(let i=0;i<catProd.length;i++){
-        if(catProd[i].category ===catId){
-            filter.push(catProd[i])
-        }
-    }
+    const paramCategory = useParams()
+    console.log(paramCategory);
+
+    const [stockData, setStockData] = useState([]);
+
+    useEffect(() => {
+        const db = getFirestore();
+        console.log(paramCategory);
+        const stock = collection(db, 'stock');
+        getDocs(stock)
+            .then(stock => {
+                if (stock.lenght === 0) {
+                    console.log('no products')
+                }
+
+                setStockData(stock.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+            }).catch(err => console.log(err))
+
+    }, []);
+
+
+    const filtered = []
+    stockData.forEach(e => {
+        console.log(e.category);
+        if (e.category === paramCategory.category)
+            filtered.push(e);
+    });
+
+
+    console.log(filtered);
+
+
     return (
         <div className='background'>
-        {
-            filter.map((e) => (
+            {
+                filtered.map((e) => (
 
-                <div className='container'>
-                    
-                        <div className='card'>
-                            <h1 className='cardTitle'>{e.title}</h1>
-                            <img src={e.image} alt={e.title} className="cardImage" />
-                            <p className='cardPrice'>${e.price}</p>
-                            <Link to={`/products/${e.id}`}><button>Agregar al carro</button></Link>
+                    <div className='CBackground'>
+                        <div className='CContainer'>
+                        <Link to={`/products/${e.id}`}>
+                            <Card style={{ width: '20rem' }}>
+
+                                <Card.Img variant="top" src={e.image} alt={e.title} className="CcardImage" />
+                                <Card.Body className='CcardB'>
+                                    <Card.Title className='CcardTitle'>{e.title}</Card.Title>
+
+                                    <Card.Text className='Ctext'>{e.description}</Card.Text>
+                                    <Card.Text className='Ctext'>${e.price}</Card.Text>
+                                </Card.Body>
+                            </Card>
+                            </Link>
                         </div>
-                    
-
-                </div>
-            ))
-        }
+                    </div>
+                ))
+            }
         </div>
     )
 }
